@@ -1,0 +1,122 @@
+/* Basic CSS Reset based on Andy Bell's Modern CSS Reset  */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove browser defaults */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
+	list-style: none;
+}
+
+/* Make images easier to work with */
+img {
+	max-width: 100%;
+	display: block;
+
+}
+
+body{
+    background-color: hsl(233, 47%, 7%);
+    font-size: 15px;
+    text-align: center;
+}
+
+#container{
+    background-color: hsl(244, 38%, 16%);
+	color:#ffffff;
+	width: 90%;
+    border-radius: 10px;
+	margin: 0 auto;
+    margin-top: 3.5rem;
+	line-height: 1.75rem;
+}
+
+.overlay{
+    background: linear-gradient(to top, rgba(152, 36, 224, 0.5), rgba(152, 36, 224, 0.5)), url(/images/image-header-mobile.jpg) no-repeat top center;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 29vh;
+    width: 100%;
+}
+
+.insights{
+    color: hsl(277, 64%, 61%);
+}
+
+.head{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    padding-top: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+p{
+    font-family: 'Inter', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.numbers{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: hsl(0, 0%, 100%);
+}
+
+.stats{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 10px;
+    color: hsla(0, 0%, 100%, 0.6);
+    padding-bottom: 1.5rem;
+}
+
+footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px){
+    #container{
+        display:flex;
+        flex-direction: row-reverse;
+        margin-top: 14rem;
+        max-width:1000px;
+    }
+
+    .overlay{
+        background: linear-gradient(to top, rgba(152, 36, 224, 0.5), rgba(152, 36, 224, 0.5)), url(/images/image-header-desktop.jpg) no-repeat right center;
+        background-size: cover;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        height: auto;
+        width: 500%;
+    }
+}
