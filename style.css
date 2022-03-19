@@ -40,8 +40,11 @@ body{
 }
 
 #container{
+    display: flex;
+    flex-direction: column;
     background-color: hsl(244, 38%, 16%);
 	color:#ffffff;
+    min-width: 315px;
 	width: 90%;
     border-radius: 10px;
 	margin: 0 auto;
@@ -49,8 +52,8 @@ body{
 	line-height: 1.75rem;
 }
 
-.overlay{
-    background: linear-gradient(to top, rgba(152, 36, 224, 0.5), rgba(152, 36, 224, 0.5)), url(/images/image-header-mobile.jpg) no-repeat top center;
+.image{
+    background: linear-gradient(to top, rgba(152, 36, 224, 0.5), rgba(152, 36, 224, 0.5)), url(images/image-header-mobile.jpg) no-repeat top center;
     background-size: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -73,11 +76,11 @@ body{
 
 p{
     font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
     color: hsla(0, 0%, 100%, 0.75);
     padding-top: 2rem;
     padding-bottom: 2rem;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
 }
 
 .numbers{
@@ -87,11 +90,13 @@ p{
     color: hsl(0, 0%, 100%);
 }
 
-.stats{
+.stat-titles{
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 10px;
+    font-size: 15px;
+    font-weight: lighter;
     color: hsla(0, 0%, 100%, 0.6);
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
+
 }
 
 footer{
@@ -104,19 +109,78 @@ footer{
 
 @media screen and (min-width: 768px){
     #container{
-        display:flex;
         flex-direction: row-reverse;
         margin-top: 14rem;
-        max-width:1000px;
+        max-width:1100px;
+        height: 28rem;
     }
 
-    .overlay{
-        background: linear-gradient(to top, rgba(152, 36, 224, 0.5), rgba(152, 36, 224, 0.5)), url(/images/image-header-desktop.jpg) no-repeat right center;
+    .head{
+
+        line-height: 3rem;
+        text-align: left;
+        padding: 2rem;
+    }
+
+
+    p{
+        line-height: 1.5rem;
+        padding-bottom: 4rem;
+    }
+
+    .image{
+        background: linear-gradient(to top, rgba(152, 36, 224, 0.5), rgba(152, 36, 224, 0.5)), url(images/image-header-desktop.jpg) no-repeat right center;
         background-size: cover;
         border-top-left-radius: 0px;
         border-bottom-right-radius: 10px;
         border-top-right-radius: 10px;
         height: auto;
-        width: 500%;
+        width: 100%;
+        padding-left: 5rem;
     }
-}
+
+    li{
+        display: inline-block;
+        padding-right: 1rem;
+        line-height: 2rem;
+    }
+
+    @media screen and (min-width:1200px) {
+        #container{
+            flex-direction: row-reverse;
+            margin-top: 14rem;
+            max-width:1100px;
+            height: 28rem;
+        }
+    
+        .head{
+            font-size: 35px;
+            line-height: 3rem;
+            text-align: left;
+            padding: 4rem;
+        }
+    
+    
+        p{
+            line-height: 1.5rem;
+            padding-bottom: 4rem;
+        }
+    
+        .image{
+            background: linear-gradient(to top, rgba(152, 36, 224, 0.5), rgba(152, 36, 224, 0.5)), url(/images/image-header-desktop.jpg) no-repeat right center;
+            background-size: cover;
+            border-top-left-radius: 0px;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+            height: auto;
+            width: 100%;
+            padding-left: 15rem;
+        }
+    
+        li{
+            display: inline-block;
+            padding-right: 2rem;
+            line-height: 2rem;
+        }
+        
+    }
