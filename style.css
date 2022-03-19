@@ -167,7 +167,7 @@ footer{
         }
     
         .image{
-            background: linear-gradient(to top, rgba(152, 36, 224, 0.5), rgba(152, 36, 224, 0.5)), url(/images/image-header-desktop.jpg) no-repeat right center;
+            background: linear-gradient(to top, rgba(152, 36, 224, 0.5), rgba(152, 36, 224, 0.5)), url(images/image-header-desktop.jpg) no-repeat right center;
             background-size: cover;
             border-top-left-radius: 0px;
             border-bottom-right-radius: 10px;
